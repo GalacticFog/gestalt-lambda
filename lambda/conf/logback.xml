@@ -1,0 +1,27 @@
+<configuration>
+    
+  <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%coloredLevel - %logger - %message%n%xException</pattern>
+    </encoder>
+  </appender>
+
+  <!--
+    The logger name is typically the Java/Scala package name.
+    This configures the log level to log at for a package and its children packages.
+  -->
+  <logger name="play" level="DEBUG"/>
+  <logger name="application" level="DEBUG"/>
+  <logger name="com.galacticfog.gestalt" level="DEBUG"/>
+  <!-- this is useful for debugging communication with HTTP API but is really spammy
+		<logger name="com.groupo.mesos" level="DEBUG"/>
+	-->
+	<logger name="com.ning.http.client" level="WARN"/>
+
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+</configuration>

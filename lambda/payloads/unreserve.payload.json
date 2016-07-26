@@ -1,0 +1,24 @@
+[
+  {
+    "name": "cpus",
+    "type": "SCALAR",
+    "scalar": {
+      "value": 1.20000000298023
+    },
+    "role": "test",
+    "reservation": {
+      "principal": "foo"
+    }
+  },
+  {
+    "name": "mem",
+    "type": "SCALAR",
+    "scalar": {
+      "value": 1239
+    },
+    "role": "test",
+    "reservation": {
+      "principal": "foo"
+    }
+  }
+]

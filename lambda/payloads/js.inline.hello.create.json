@@ -1,0 +1,23 @@
+{
+	"id" : "d6483459-ce3e-43ca-8068-83183a42f9ea",
+  "eventFilter": "FAKE1",
+	"public" : true,
+  "artifactDescription": {
+    "code": "ZnVuY3Rpb24gaGVsbG8oZXZlbnQsIGNvbnRleHQpIHsNCiAgLy8gQ2FsbCB0aGUgY29uc29sZS5sb2cgZnVuY3Rpb24uDQogIGNvbnNvbGUubG9nKCJIZWxsbyBXb3JsZCIpOw0KICB2YXIgZW52ID0gamF2YS5sYW5nLlN5c3RlbS5nZXRlbnYoKTsNCiAgdmFyIHRlc3QgPSBlbnYuZ2V0KCJNRVRBX1RFU1QiKTsNCiAgcmV0dXJuICI8aHRtbD48aGVhZD48L2hlYWQ+PGJvZHk+PGgxPjxjZW50ZXI+SEVMTE8gV09STEQgSU5MSU5FIENPREUhISAtICIgKyB0ZXN0ICsgIiA8aHI+PC9oMT48YnI+PGg0PlNlcnZlcmxlc3Mgd2VicGFnZSEhITwvaDQ+PGJyPjxibGluaz53MDB0PC9ibGluaz48L2NlbnRlcj48L2JvZHk+PC9odG1sPiI7DQp9Ow==",
+    "description": "super simple twilio call lambda",
+    "functionName": "hello",
+    "handler": "hello.js",
+    "memorySize": 511,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "nodejs",
+    "timeoutSecs": 180,
+		"headers" : [
+		{
+			"key" : "Accept",
+			"value" : "text/html"
+		}
+		]
+  }
+}

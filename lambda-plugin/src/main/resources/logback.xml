@@ -1,0 +1,20 @@
+<configuration>
+
+  <logger name="scalikejdbc" level="WARN"/>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  
+  <useJansi>true</useJansi>
+    <!-- encoders are assigned the type
+         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <encoder>
+ <charset>UTF-8</charset> 
+      <!--  <pattern>%-4relative [%thread] %-5level %logger{35} - %msg %n</pattern> -->
+      <pattern>%-4r %highlight(%-5level) - %msg%n</pattern>
+    </encoder>
+  </appender>
+  
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT" />
+  </root>
+</configuration>

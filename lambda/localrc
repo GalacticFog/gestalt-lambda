@@ -1,0 +1,20 @@
+export LAMBDA_FLYWAY_MIGRATE=true
+export LAMBDA_FLYWAY_CLEAN=false
+export LAMBDA_DATABASE_HOSTNAME=localhost
+export LAMBDA_DATABASE_PORT=5432
+export LAMBDA_DATABASE_NAME=gestaltlambda
+export LAMBDA_DATABASE_USER=gestaltdev
+export LAMBDA_DATABASE_PASSWORD=M8keitw0rk
+#export MESOS_MASTER_CONNECTION=zk://ec2-54-173-172-97.compute-1.amazonaws.com/mesos
+export MESOS_MASTER_CONNECTION=192.168.200.20:5050
+export MESOS_ROLE=*
+export SCHEDULER_NAME=lambda-scheduler
+
+#security config
+export GESTALT_SECURITY_PROTOCOL=https
+export GESTALT_SECURITY_HOSTNAME=security.test.galacticfog.com
+export GESTALT_SECURITY_PORT=9455
+export GESTALT_SECURITY_KEY=4eecb4dc-7658-432d-8504-b3fb538d91a3
+export GESTALT_SECURITY_SECRET=Rd8MublhWS21f5b2+BkD/yuwGvRNyypcjCDNp55c
+
+#export JAVA_OPTS=-javaagent:/Users/bradfutch/work/gfi/gestalt-lambda/lambda/newrelic/newrelic.jar

@@ -1,0 +1,21 @@
+{
+	"id" : "78ec41f9-119e-4c6d-bfbf-72808113c4d5",
+  "eventFilter": "com.test.laser.CallTest",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/js_call.zip",
+    "description": "super simple twilio call lambda",
+    "functionName": "call",
+    "handler": "js_call.js",
+    "memorySize": 1024,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "nodejs",
+    "timeoutSecs": 180,
+		"headers" : [
+			{ "key" : "Accept",
+				"value" : "text/html"
+			}
+		]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "eventFilter": "com.vatomic.nascar.TestReactor",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/test-reactor-1.0-SNAPSHOT-fat.jar",
+    "description": "super simple hellow world lambda",
+    "functionName": "react",
+    "handler": "com.vatomic.nascar.TestReactor",
+    "memorySize": 1024,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "java",
+    "timeoutSecs": 180
+  }
+}

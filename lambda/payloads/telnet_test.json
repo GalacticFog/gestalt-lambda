@@ -1,0 +1,22 @@
+{
+	"id" : "busybox",
+	"cmd": "echo TEST && telnet gestalt-dev.crqimf2biim3.us-east-1.rds.amazonaws.com 5432",
+		"env": {
+		},
+		"instances": 1,
+		"cpus": 0.2,
+		"mem": 1024,
+		"ports": [ 31900 ],
+		"requirePorts": true,
+		"container": {
+			"type": "DOCKER",
+			"volumes": [],
+				"docker": {
+					"image": "busybox:latest",
+					"network": "HOST",
+					"forcePullImage": true
+				}
+		},
+		"healthChecks": [],
+		"labels": {}
+}

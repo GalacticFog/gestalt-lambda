@@ -1,0 +1,60 @@
+{
+	"id" : "dev/gestalt-lambda",
+	"args": ["-Dhttp.port=31900","-J-Xmx1024m"],
+		"env": {
+			"GESTALT_VERSION": "1.0",
+			"GESTALT_SECURITY_APPID": "bd96d05a-7065-4fa2-bea2-98beebe8ebe4",
+			"GESTALT_ENV": "appliance; DEV",
+			"GESTALT_SECURITY_PORT": "9455",
+			"GESTALT_SECURITY_HOSTNAME": "v2.watercoins.io",
+			"GESTALT_SECURITY_SECRET": "M8keitw0rk",
+			"MESOS_NATIVE_JAVA_LIBRARY": "/usr/lib/libmesos.so",
+			"GESTALT_SECURITY_PROTOCOL": "http",
+			"GESTALT_NODE_ID": "0",
+			"GESTALT_META": "http://wrong:1234",
+			"GESTALT_SECURITY_KEY": "admin",
+			"GESTALT_LOCAL": "/opt/docker/conf/local_config.json",
+			"GESTALT_SECRET": "secret",
+			"GESTALT_ID": "bd96d05a-7065-4fa2-bea2-98beebe8ebe4",
+			"GESTALT_ORG": "com.galacticfog",
+			"LAMBDA_FLYWAY_MIGRATE": "true",
+			"CACHE_CHECK_SECONDS" : "30",
+			"CACHE_EXPIRE_SECONDS" : "900"
+		},
+		"instances": 1,
+		"cpus": 0.2,
+		"mem": 1024,
+		"ports": [ 31900 ],
+		"requirePorts": true,
+		"container": {
+			"type": "DOCKER",
+			"volumes": [
+			{
+				"containerPath": "/opt/docker/conf/local_config.json",
+				"hostPath": "/home/centos/LambdaConfigDev.json",
+				"mode": "RO"
+			}
+			],
+				"docker": {
+					"image": "galacticfog.artifactoryonline.com/gestalt-lambda:latest",
+					"network": "HOST",
+					"forcePullImage": true
+				}
+		},
+		"healthChecks": [
+		{
+			"path": "/health",
+			"protocol": "HTTP",
+			"portIndex": 0,
+			"gracePeriodSeconds": 300,
+			"intervalSeconds": 60,
+			"timeoutSeconds": 20,
+			"maxConsecutiveFailures": 3,
+			"ignoreHttp1xx": false
+		}
+	],
+		"labels": {
+			"HAPROXY_0_VHOST": "lambda.dev.galacticfog.com",
+			"HAPROXY_0_PORT": "17777"
+		}
+}

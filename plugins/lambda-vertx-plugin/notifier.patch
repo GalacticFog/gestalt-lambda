@@ -1,0 +1,4 @@
+[
+	{ "op" : "replace", "path" : "/sources", "value" : "[{\"sourceType\":\"gestalt-event-source\",\"config\":{\"host\":\"events.galacticfog.com\",\"port\":2181,\"channel\":\"test/notifier\",\"read_from_beginning\":false},\"handler\":{\"handlerType\":\"sink-handler\",\"config\":{\"sinkType\":\"twilio-sink\",\"config\":{\"number\":\"+15122130291\",\"account_sid\":\"AC88f9684ffa9e089c8051a917a754f320\",\"auth_token\":\"a8caa959b5b462263a9e63b1d8549d64\"}}}},{\"sourceType\":\"twilio-source\",\"config\":{\"delay\":5,\"number\":\"+15122130291\",\"account_sid\":\"AC88f9684ffa9e089c8051a917a754f320\",\"auth_token\":\"a8caa959b5b462263a9e63b1d8549d64\"},\"handler\":{\"handlerType\":\"sink-handler\",\"config\":{\"sinkType\":\"gestalt-event-sink\",\"config\":{\"channel\":\"test/default\",\"hosts\":[{\"host\":\"events.galacticfog.com\",\"port\":9092}]}}}}]" },
+	{ "op" : "replace", "path" : "/sinks", "value" : "[]" }
+]

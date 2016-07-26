@@ -1,0 +1,28 @@
+{
+  "stream-listener": {
+    "host": "events.galacticfog.com",
+    "port": 2181,
+    "channel": "brad_vatomic/lambda",
+		"read_from_beginning" : false
+  },
+	"vertx-adapter" : {
+		"protocol" : "http",
+		"host" : "localhost",
+		"port" : 9099,
+		"username" : "root",
+		"password" : "letmein"
+	},
+	"database" : {
+		"host" : "localhost",
+		"port" : 5432,
+		"db_name" : "gestaltlambda",
+		"username" : "gestaltdev",
+		"password" : "M8keitw0rk"
+	},
+	"gfi-adapter": {
+		"host": "54.173.172.97",
+		"port" : 5050,
+		"role" : "*",
+		"name" : "prod-lambda-scheduler"
+	}
+}

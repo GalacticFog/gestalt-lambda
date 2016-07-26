@@ -1,0 +1,16 @@
+{
+	"id" : "6d401a9a-caaf-4001-b020-1a992d6ecdb8",
+  "eventFilter": "com.test.laser.JavaCallTest",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/java-call-lambda-1.0-SNAPSHOT-fat.jar",
+    "description": "super simple java twilio call lambda",
+    "functionName": "call",
+    "handler": "com.galacticfog.test.JavaTestLambda",
+    "memorySize": 1024,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "java",
+    "timeoutSecs": 180
+  }
+}

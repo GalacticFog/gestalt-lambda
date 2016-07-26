@@ -1,0 +1,16 @@
+call.event.json
+call.anthony.json
+logs
+target
+secretrc
+*.jar
+*.log
+lib/
+plugins/
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+/newrelic

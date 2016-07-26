@@ -1,0 +1,29 @@
+<configuration>
+  <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel"/>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%coloredLevel - %logger - %message%n%xException</pattern>
+    </encoder>
+  </appender>
+  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+    <file>lambda.log</file>
+    <encoder>
+      <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
+    </encoder>
+  </appender>
+  <!--
+    The logger name is typically the Java/Scala package name.
+    This configures the log level to log at for a package and its children packages.
+  -->
+  <logger name="play" level="DEBUG"/>
+	<logger name="akka" level="DEBUG" />
+  <logger name="application" level="DEBUG"/>
+  <logger name="com.galacticfog.gestalt.io" level="DEBUG"/>
+  <logger name="com.galacticfog.gestalt" level="TRACE"/>
+  <logger name="com.galacticfog.gestalt.impl" level="TRACE"/>
+  <logger name="com.galacticfog.gestalt.impl.actor" level="TRACE"/>
+  <root level="DEBUG">
+    <appender-ref ref="STDOUT"/>
+    <appender-ref ref="FILE"/>
+  </root>
+</configuration>

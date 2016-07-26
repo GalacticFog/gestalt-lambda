@@ -1,0 +1,22 @@
+{
+  "stream-listener": {
+    "host": "v2.watercoins.io",
+    "port": 2181,
+    "channel": "brad_vatomic/lambda",
+		"read_from_beginning" : false
+  },
+	"vertx-adapter" : {
+		"protocol" : "http",
+		"host" : "v2.watercoins.io",
+		"port" : 9099,
+		"username" : "admin",
+		"password" : "M8keitw0rk"
+	},
+	"database" : {
+		"host" : "gestalt.csf5fr9bpgp9.us-east-1.rds.amazonaws.com",
+		"port" : 5432,
+		"db_name" : "gestaltlambda",
+		"username" : "gestaltdev",
+		"password" : "GF4thewin!"
+	}
+}

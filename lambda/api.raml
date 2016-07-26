@@ -1,0 +1,99 @@
+#%RAML 0.8
+title: Gestalt Lambda
+version: "1.0.0"
+baseUri: "http://example.com/v1"
+schemas: 
+    - 
+        LambdaDao: '{"type":"object","title":"LambdaDao","properties":{"id":{"type":"string","required":false,"title":"id"},"eventFilter":{"type":"string","required":true,"title":"eventFilter"},"artifactDescription":{"type":"object","$ref":"#/schemas/VertxDao","required":true,"title":"artifactDescription"}}}'
+        VertxDaoPolicyConfig: '{"type":"object","title":"VertxDaoPolicyConfig"}'
+        VertxDaoPayload: '{"type":"object","title":"VertxDaoPayload"}'
+        VertxDao: '{"type":"object","title":"VertxDao","properties":{"id":{"type":"string","required":false,"title":"id"},"verticleName":{"type":"string","required":true,"title":"verticleName"},"artifactUri":{"type":"string","required":true,"title":"artifactUri"},"timeOut":{"type":"integer","required":true,"title":"timeOut"},"eventFilter":{"type":"string","required":true,"title":"eventFilter"},"policyConfig":{"type":"object","$ref":"#/schemas/VertxDaoPolicyConfig","required":true,"title":"policyConfig"},"payload":{"type":"object","$ref":"#/schemas/VertxDaoPayload","required":false,"title":"payload"}}}'
+/lambdas: 
+    displayName: Lambdas
+    uriParameters: 
+        id: 
+            displayName: id
+            type: string
+            required: false
+            repeat: false
+            example: sample id
+    get: 
+        description: ""
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: LambdaDao
+                        example: '{"id":"sample id","artifactDescription":null,"eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: LambdaDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            artifactDescription: null
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+                    text/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+    post: 
+        description: ""
+        body: 
+            application/json: 
+                schema: LambdaDao
+                example: '{"id":"sample id","artifactDescription":null,"eventFilter":"sample eventFilter"}'
+            application/x-yaml: 
+                schema: LambdaDao
+                example: |
+                    ---
+                    id: "sample id"
+                    artifactDescription: null
+                    eventFilter: "sample eventFilter"
+            application/xml: 
+                schema: LambdaDao
+                example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+            text/xml: 
+                schema: LambdaDao
+                example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: LambdaDao
+                        example: '{"id":"sample id","artifactDescription":null,"eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: LambdaDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            artifactDescription: null
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+                    text/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+    delete: 
+        description: ""
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: LambdaDao
+                        example: '{"id":"sample id","artifactDescription":null,"eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: LambdaDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            artifactDescription: null
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"
+                    text/xml: 
+                        schema: LambdaDao
+                        example: "<LambdaDao><id>sample id</id><artifactDescription/><eventFilter>sample eventFilter</eventFilter></LambdaDao>"

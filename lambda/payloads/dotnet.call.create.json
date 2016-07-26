@@ -1,0 +1,15 @@
+{
+  "eventFilter": "com.galacticfog.dotnet.Call",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/dotnet_call.zip",
+    "description": "super simple twilio call lambda for dotnet",
+    "functionName": "dontmatter",
+		"handler": "dotnet_call/bin/Debug/dnxcore50/ubuntu1404_x64/publish/dotnet_call",
+    "memorySize": 512,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "dotnet",
+    "timeoutSecs": 180
+  }
+}

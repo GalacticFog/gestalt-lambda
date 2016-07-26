@@ -1,0 +1,15 @@
+{
+  "eventFilter": "com.test.aws.HelloWorld",
+  "artifactDescription": {
+    "s3Bucket": "gfi.lambdas",
+    "s3Name": "hello_world.zip",
+    "description": "super simple hellow world lambda",
+    "functionName": "hello",
+    "handler": "hello_world.hello",
+    "memorySize": 128,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "nodejs",
+    "timeoutSecs": 3
+  }
+}

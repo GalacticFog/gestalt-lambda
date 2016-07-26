@@ -1,0 +1,15 @@
+{
+	"name" : "testing13.example.com",
+	"recordType" : "A",
+	"ttl" : 300,
+	"dnsDomainId" : 1,
+	"ipAddresses" : [
+		{ "address" : "192.168.0.114" }
+	],
+	"change_management" : {
+		"reason" : "cause I said so",
+		"schedule" : "2015-08-13",
+		"deadline" : "2015-10-30",
+		"provider_id" : "1"
+	}
+}

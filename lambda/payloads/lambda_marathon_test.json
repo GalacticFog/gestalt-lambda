@@ -1,0 +1,78 @@
+{
+  "id": "gestalt-lambda-test",
+  "args": [
+    "-Dhttp.port=31901",
+    "-Dlogger.file=/opt/docker/conf/logback.xml",
+    "-J-Xmx1024m"
+  ],
+  "env": {
+    "GESTALT_SECURITY_PROTOCOL": "https",
+    "GESTALT_SECURITY_PORT": "9455",
+    "GESTALT_SECURITY_HOSTNAME": "security.test.galacticfog.com",
+		"GESTALT_SECURITY_KEY" : "4eecb4dc-7658-432d-8504-b3fb538d91a3",
+		"GESTALT_SECURITY_SECRET" : "Rd8MublhWS21f5b2+BkD/yuwGvRNyypcjCDNp55c",
+    "MESOS_NATIVE_JAVA_LIBRARY": "/usr/lib/libmesos.so",
+    "MESOS_NATIVE_LIBRARY": "/usr/lib/libmesos.so",
+    "LAMBDA_FLYWAY_MIGRATE": "true",
+    "LAMBDA_DATABASE_HOSTNAME": "gestalt-dev.crqimf2biim3.us-east-1.rds.amazonaws.com",
+    "LAMBDA_DATABASE_PORT": "5432",
+    "LAMBDA_DATABASE_NAME": "gestaltlambdatest",
+    "LAMBDA_DATABASE_USER": "gestaltdev",
+    "LAMBDA_DATABASE_PASSWORD": "M8keitw0rk",
+    "META_PROTOCOL": "https",
+    "META_HOSTNAME": "meta.test.galacticfog.com",
+    "META_PORT": "14374",
+		"META_USER" : "4eecb4dc-7658-432d-8504-b3fb538d91a3",
+		"META_PASSWORD" : "Rd8MublhWS21f5b2+BkD/yuwGvRNyypcjCDNp55c",
+    "MESOS_MASTER_CONNECTION": "zk://master.mesos:2181/mesos",
+    "MESOS_ROLE": "*",
+    "SCHEDULER_NAME": "lambda-test-scheduler",
+    "CACHE_CHECK_SECONDS": "30",
+    "CACHE_EXPIRE_SECONDS": "900",
+		"NEW_RELIC_LICENSE_KEY" : "64300aae4a006efc6fa13ab9f88386f186707003",
+		"OFFER_TTL" : "5",
+		"MAX_LAMBDAS_PER_OFFER" : "6"
+  },
+  "instances": 1,
+  "cpus": 2.0,
+  "mem": 1300,
+  "ports": [
+    31901
+  ],
+  "requirePorts": true,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "galacticfog.artifactoryonline.com/gestalt-lambda:1.0.3-SNAPSHOT-3074f26d",
+      "network": "HOST",
+      "forcePullImage": true
+    }
+  },
+  "healthChecks": [
+    {
+      "path": "/health",
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3,
+      "ignoreHttp1xx": false
+    }
+  ],
+  "labels": {
+    "HAPROXY_0_VHOST": "lambda.test.galacticfog.com",
+    "HAPROXY_GROUP": "external"
+  },
+  "portDefinitions": [
+    {
+      "port": 31901,
+      "protocol": "tcp",
+      "name": "service",
+      "labels": {
+        "VIP_0": "10.0.20.1:80"
+      }
+    }
+  ]
+}

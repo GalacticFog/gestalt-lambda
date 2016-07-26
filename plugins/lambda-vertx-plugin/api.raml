@@ -1,0 +1,98 @@
+#%RAML 0.8
+title: Gestalt Vertx
+version: "1.0.0"
+baseUri: "http://example.com/v1"
+schemas: 
+    - 
+        VertxDaoPolicyConfig: '{"type":"object","title":"VertxDaoPolicyConfig"}'
+        VertxDaoPayload: '{"type":"object","title":"VertxDaoPayload"}'
+        VertxDao: '{"type":"object","title":"VertxDao","properties":{"id":{"type":"string","required":false,"title":"id"},"verticleName":{"type":"string","required":true,"title":"verticleName"},"artifactUri":{"type":"string","required":true,"title":"artifactUri"},"timeOut":{"type":"integer","required":true,"title":"timeOut"},"eventFilter":{"type":"string","required":true,"title":"eventFilter"},"policyConfig":{"type":"object","$ref":"#/schemas/VertxDaoPolicyConfig","required":true,"title":"policyConfig"},"payload":{"type":"object","$ref":"#/schemas/VertxDaoPayload","required":false,"title":"payload"}}}'
+/verticles: 
+    displayName: Verticles
+    uriParameters: 
+        id: 
+            displayName: id
+            type: string
+            required: false
+            repeat: false
+            example: sample id
+    get: 
+        description: ""
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: VertxDao
+                        example: '{"id":"sample id","timeOut":1,"verticleName":"sample verticleName","payload":{},"policyConfig":{},"artifactUri":"sample artifactUri","eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: VertxDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            timeOut: 1
+                            verticleName: "sample verticleName"
+                            payload: {}
+                            policyConfig: {}
+                            artifactUri: "sample artifactUri"
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+                    text/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+    post: 
+        description: ""
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: VertxDao
+                        example: '{"id":"sample id","timeOut":1,"verticleName":"sample verticleName","payload":{},"policyConfig":{},"artifactUri":"sample artifactUri","eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: VertxDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            timeOut: 1
+                            verticleName: "sample verticleName"
+                            payload: {}
+                            policyConfig: {}
+                            artifactUri: "sample artifactUri"
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+                    text/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+    delete: 
+        description: ""
+        responses: 
+            "200": 
+                body: 
+                    application/json: 
+                        schema: VertxDao
+                        example: '{"id":"sample id","timeOut":1,"verticleName":"sample verticleName","payload":{},"policyConfig":{},"artifactUri":"sample artifactUri","eventFilter":"sample eventFilter"}'
+                    application/x-yaml: 
+                        schema: VertxDao
+                        example: |
+                            ---
+                            id: "sample id"
+                            timeOut: 1
+                            verticleName: "sample verticleName"
+                            payload: {}
+                            policyConfig: {}
+                            artifactUri: "sample artifactUri"
+                            eventFilter: "sample eventFilter"
+                    application/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+                    text/xml: 
+                        schema: VertxDao
+                        example: "<VertxDao><id>sample id</id><timeOut>1</timeOut><verticleName>sample verticleName</verticleName><payload/><policyConfig/><artifactUri>sample artifactUri</artifactUri><eventFilter>sample eventFilter</eventFilter></VertxDao>"
+/verticles/id/invoke: 
+    displayName: VerticleInvoke
+
+    post: 
+        description: ""

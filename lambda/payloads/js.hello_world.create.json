@@ -1,0 +1,16 @@
+{
+  "eventFilter": "com.test.laser.HelloWorld",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/hello_world.zip",
+    "description": "super simple hellow world lambda",
+    "functionName": "hello",
+    "handler": "hello_world.js",
+    "memorySize": 1024,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "nodejs",
+    "timeoutSecs": 180,
+		"headers" : [ { "key" : "Accept", "value" : "text/html" } ]
+  }
+}

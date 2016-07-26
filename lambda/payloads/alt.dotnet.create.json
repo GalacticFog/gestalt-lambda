@@ -1,0 +1,15 @@
+{
+  "eventFilter": "com.galacticfog.dotnet.AltHelloWorld",
+  "artifactDescription": {
+    "artifactUri": "https://s3.amazonaws.com/gfi.lambdas/alt_hello_world.zip",
+    "description": "super simple hellow world lambda",
+    "functionName": "dontmatter",
+    "handler": "please",
+    "memorySize": 1024,
+    "cpus": 0.2,
+    "publish": false,
+    "role": "arn:aws:iam::245814043176:role/GFILambda",
+    "runtime": "dotnet",
+    "timeoutSecs": 180
+  }
+}

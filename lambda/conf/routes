@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET           /health                        controllers.Application.getHealth
+
+
+GET           /lambdas/:id                   controllers.Application.getLambda( id : String )
+GET           /lambdas                       controllers.Application.searchLambdas
+POST          /lambdas                       controllers.Application.createLambda
+PUT           /lambdas/:id                   controllers.Application.updateLambda( id : String )
+DELETE        /lambdas/:id                   controllers.Application.deleteLambda( id : String )
+
+POST          /lambdas/:id/invoke            controllers.Application.invokeLambda( id : String )
+GET           /lambdas/:id/invoke            controllers.Application.invokeLambdaSyncNoBody( id : String )
+# TODO : browse should not cache this request -
+
+POST          /lambdas/:id/invokeSync        controllers.Application.invokeLambdaSync( id : String )
+GET           /lambdas/:id/invokeSync        controllers.Application.invokeLambdaSyncNoBody( id : String )
+
+POST          /lambdas/:id/invalidate        controllers.Application.invalidateCache( id : String )
+
+GET           /results/:id                   controllers.Application.getResult( id : String )
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                  controllers.Assets.versioned(path="/public", file: Asset)

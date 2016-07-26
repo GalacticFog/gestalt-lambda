@@ -1,0 +1,18 @@
+{
+	"eventFilter" : "lambda.com.vatomic.nascar.TestReactor.8675309",
+	"artifactDescription" : {
+		"verticleName": "lambda.com.vatomic.nascar.TestReactor",
+		"artifactUri": "file:///Users/bradfutch/work/gfi/test-reactor/target/test-reactor-1.0-SNAPSHOT-fat.jar",
+		"timeOut" : 5000,
+		"eventFilter": "vertx.vatomic.com.nascar.stickerpack.gift",
+		"policyConfig": { 
+			"metaConfig" : {
+				"host" : "localhost",
+				"port" : 14374,
+				"protocol" : "http",
+				"user" : "root",
+				"password" : "letmein"
+			}
+		}
+	}
+}

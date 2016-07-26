@@ -1,0 +1,14 @@
+{
+	"Code": {
+		"S3Bucket": "gfi.lambdas",
+			"S3Key": "hello_world.zip"
+	},
+		"Description": "Simple test of AWS Lambda",
+		"FunctionName": "hello_world",
+		"Handler": "hello_world.js",
+		"MemorySize": 128,
+		"Publish": true,
+		"Role": "arn:aws:iam::245814043176:role/aws-elasticbeanstalk-ec2-role",
+		"Runtime": "nodejs",
+		"Timeout": 3
+}
