@@ -1,4 +1,4 @@
-<This repo is deprecated!  This was the orginial 1.0 lambda prototype engine.   For the latest version of gestalt and laser please refer to: http://docs.galacticfog.com/
+This repo is deprecated!  This was the orginial 1.0 lambda prototype engine.   For the latest version of gestalt and laser please refer to: http://docs.galacticfog.com/
 
 
 
